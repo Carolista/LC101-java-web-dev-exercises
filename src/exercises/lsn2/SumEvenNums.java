@@ -1,11 +1,13 @@
 package exercises.lsn2;
 
+import java.util.ArrayList;
+
 public class SumEvenNums {
-    public static int sumEvens(int[] numArray) {
-        int lenArray = numArray.length;
+    public static int sumEvens(ArrayList<Integer> numList) {
+        int lenArray = numList.size();
         int total = 0;
-        for (int i = 0; i < lenArray; i++) {
-            total += numArray[i];
+        for (int num : numList) {
+            total += num;
         }
         return total;
     }
