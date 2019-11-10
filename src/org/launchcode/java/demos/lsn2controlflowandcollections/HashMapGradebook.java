@@ -12,7 +12,7 @@ public class HashMapGradebook {
         Scanner input = new Scanner(System.in);
         String newStudent;
 
-        System.out.println("Enter your students (or ENTER to finish):");
+        System.out.println("\nEnter your students (or ENTER to finish):\n");
 
         // Get student names and grades
         do {
@@ -41,6 +41,6 @@ public class HashMapGradebook {
         }
 
         double avg = sum / students.size();
-        System.out.println("Average grade: " + avg);
+        System.out.println("\nAverage grade: " + avg);
     }
 }

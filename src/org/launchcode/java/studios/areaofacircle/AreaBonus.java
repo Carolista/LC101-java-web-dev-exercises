@@ -8,15 +8,17 @@ public class AreaBonus {
         double r = 0;
 
         // THIS IS NOT WORKING YET
-        System.out.println("Enter a radius: ");
+        System.out.print("Enter a radius: ");
+
         do {
-            if (input.hasNextDouble() && (input.nextDouble() > 0)) {
+            if ( ! input.hasNextDouble() || input.nextDouble() < 1) {
+                System.out.print("Oops! Enter a number greater than zero: ");
+                input.nextLine();
+            } else {
                 r = input.nextDouble();
-                break;
+                System.out.println("Radius has been set to " + r + ".");
             }
-            System.out.println("Oops! Enter a number greater than zero.");
-            input.next();
-        } while (r == 0);
+        } while (r < 1);
 
         double area = Circle.getArea(r);
         System.out.println("The area of a circle of radius " + r + " is: " + area);
