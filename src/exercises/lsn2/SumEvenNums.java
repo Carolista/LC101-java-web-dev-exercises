@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 public class SumEvenNums {
     public static int sumEvens(ArrayList<Integer> numList) {
-        int lenArray = numList.size();
         int total = 0;
         for (int num : numList) {
-            total += num;
+            if (num % 2 == 0) {
+                total += num;
+                System.out.println(num + " was added and the total is now " + total + ".");
+            }
         }
         return total;
     }
