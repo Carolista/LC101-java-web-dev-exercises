@@ -2,14 +2,21 @@ package org.launchcode.java.studios.countingcharacters;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class CountingChars {
     public static void main(String[] args) {
-        String excerpt = "If the product of two terms is zero then common sense says at least one of the two terms has to be zero to start with. So if you move all the terms over to one side, you can put the quadratics into a form that can be factored allowing that side of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.";
-        char[] charsInExcerpt = excerpt.toCharArray();
+
+        // Have user input string
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter a string:");
+        String excerpt = input.nextLine();
+
+        // Create array of lowercase, alphanumeric characters from string
+        char[] charsInExcerpt = excerpt.replaceAll("[^a-zA-Z0-9]+","").toLowerCase().toCharArray();
         HashMap<Character, Integer> breakdown = new HashMap<>();
 
-        // add characters one by one to HashMap
+        // Add characters one by one to HashMap
         for (char singleChar : charsInExcerpt) {
             if (breakdown.containsKey(singleChar)) {
                 breakdown.put(singleChar, breakdown.get(singleChar) + 1);
