@@ -1,4 +1,4 @@
-package exercises.lsn1;
+package org.launchcode.java.exercises.lsn1;
 
 import java.util.Scanner;
 

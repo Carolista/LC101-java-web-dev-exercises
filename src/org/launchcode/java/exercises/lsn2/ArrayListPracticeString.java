@@ -1,4 +1,4 @@
-package exercises.lsn2;
+package org.launchcode.java.exercises.lsn2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
