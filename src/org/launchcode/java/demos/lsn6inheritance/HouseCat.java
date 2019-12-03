@@ -9,6 +9,14 @@ public class HouseCat extends Cat {
         name = aName;
     }
 
+    public HouseCat(String aName) {
+        name = aName;
+    }
+
+    public HouseCat(double aWeight) { // not useful without name
+        super(aWeight); // shows syntax to get into parent class constructor
+    }
+
     public boolean isSatisfied() {
         return !isHungry() && !isTired();
     }
